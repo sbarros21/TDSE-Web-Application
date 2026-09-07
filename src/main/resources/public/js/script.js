@@ -1,0 +1,1 @@
+console.log("Static script loaded successfully from the Java server.");
