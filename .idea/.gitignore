@@ -67,3 +67,6 @@ config/secrets.yml
 # ==== AWS local config (never commit) ====
 .aws/
 aws-exports.js
+
+# ==== Deployment staging (built locally, not versioned) ====
+deploy/

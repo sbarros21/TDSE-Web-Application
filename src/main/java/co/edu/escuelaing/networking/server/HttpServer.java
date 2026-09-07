@@ -15,12 +15,16 @@ import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Sequential HTTP server that serves static resources (HTML, JS, images)
+ * and exposes a small set of hardcoded dynamic services. The server
+ * processes one connection at a time; no concurrency is added.
+ */
 public class HttpServer {
 
-    public static final int PORT = 35000;
+    private static final int DEFAULT_PORT = 35000;
 
-    private static final Path PUBLIC_DIR =
-            Paths.get("src/main/resources/public").toAbsolutePath().normalize();
+    private static Path PUBLIC_DIR;
 
     private static final Map<String, String> CONTENT_TYPES = new HashMap<>();
     static {
@@ -32,8 +36,47 @@ public class HttpServer {
     }
 
     public static void main(String[] args) throws IOException {
-        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
-            System.out.println("Server listening on port " + PORT + "...");
+        int port = DEFAULT_PORT;
+        if (args.length > 0) {
+            try {
+                port = Integer.parseInt(args[0]);
+            } catch (NumberFormatException e) {
+                System.err.println("Invalid port argument, using default " + DEFAULT_PORT);
+            }
+        }
+
+        String publicDirArg = args.length > 1 ? args[1] : null;
+        PUBLIC_DIR = resolvePublicDir(publicDirArg);
+
+        start(port);
+    }
+
+    /**
+     * Resolves the public resources directory. If an explicit path is
+     * given (deployment), it is used directly. Otherwise, it looks for a
+     * "public" folder next to the running jar (deployment default); if
+     * that doesn't exist, it falls back to the Maven layout (local dev).
+     */
+    private static Path resolvePublicDir(String explicitPath) {
+        if (explicitPath != null) {
+            return Paths.get(explicitPath).toAbsolutePath().normalize();
+        }
+        Path deployDefault = Paths.get("public").toAbsolutePath().normalize();
+        if (Files.isDirectory(deployDefault)) {
+            return deployDefault;
+        }
+        return Paths.get("src/main/resources/public").toAbsolutePath().normalize();
+    }
+
+    /**
+     * Starts the sequential server loop on the given port. The listening
+     * socket stays open and keeps accepting new connections. Each accepted
+     * connection is handled fully (request read, response sent, socket
+     * closed) before the next connection is accepted.
+     */
+    public static void start(int port) throws IOException {
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
+            System.out.println("Server listening on port " + port + "...");
             System.out.println("Serving files from: " + PUBLIC_DIR);
 
             while (true) {
@@ -58,7 +101,7 @@ public class HttpServer {
         String requestLine = in.readLine();
         String line;
         while ((line = in.readLine()) != null && !line.isEmpty()) {
-            // Drain remaining headers.
+            // Drain remaining headers; not needed for this lab.
         }
 
         if (requestLine == null || requestLine.isBlank()) {
