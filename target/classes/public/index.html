@@ -6,10 +6,36 @@
 </head>
 <body>
 <h1>Mini Web Application</h1>
-<p>Static resources served by the sequential Java HTTP server.</p>
+<img src="/images/logo.png" alt="Logo" width="120">
 
-<img src="/images/logo.png" alt="Logo" width="150">
-<img src="/images/photo.jpg" alt="Photo" width="150">
+<hr>
+
+<h2>Greeting service</h2>
+<form id="greetingForm">
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button type="submit">Say hello</button>
+</form>
+
+<hr>
+
+<h2>Square service</h2>
+<form id="squareForm">
+    <label for="numberInput">Number:</label>
+    <input type="number" id="numberInput" step="any" placeholder="Enter a number">
+    <button type="submit">Calculate square</button>
+</form>
+
+<hr>
+
+<h2>Server time</h2>
+<button id="timeButton">Get server time</button>
+
+<hr>
+
+<div id="loading" style="display:none; color: gray;">Loading...</div>
+<div id="result" style="color: green; font-weight: bold;"></div>
+<div id="error" style="color: red; font-weight: bold;"></div>
 
 <script src="/js/script.js"></script>
 </body>

@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a19532fb-8fda-42b7-a624-c26fd5e7d592" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/escuelaing/networking/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/escuelaing/networking/server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/co/edu/escuelaing/networking/server/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/edu/escuelaing/networking/server/HttpServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
