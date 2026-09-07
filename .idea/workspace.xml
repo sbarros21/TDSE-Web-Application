@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a19532fb-8fda-42b7-a624-c26fd5e7d592" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/mini-webapp-lab2-jar-with-dependencies.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/mini-webapp-lab2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/img_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/evidence/imgs.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/escuelaing/networking/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/escuelaing/networking/server/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/co/edu/escuelaing/networking/server/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/co/edu/escuelaing/networking/server/HttpServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +76,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\Desktop\TDSE-Web-Application\docs\evidence" />
       <recent name="C:\Users\Usuario\Desktop\TDSE-Web-Application\src\main\resources\public\images" />
     </key>
   </component>
