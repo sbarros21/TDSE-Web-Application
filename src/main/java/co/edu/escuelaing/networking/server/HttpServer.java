@@ -100,6 +100,9 @@ public class HttpServer {
             case "/health":
                 handleHealth(out);
                 return;
+            case "/slow":
+                handleSlow(out);
+                return;
             default:
                 break;
         }
@@ -172,6 +175,22 @@ public class HttpServer {
 
     private static void handleHealth(OutputStream out) throws IOException {
         String json = "{\"status\":\"UP\"}";
+        sendResponse(out, 200, "OK", "application/json; charset=UTF-8",
+                json.getBytes(StandardCharsets.UTF_8));
+    }
+
+    /**
+     * Deliberately slow endpoint used only to demonstrate, in section 6.2,
+     * that this server processes one connection at a time: while this
+     * request sleeps, no other client can be served.
+     */
+    private static void handleSlow(OutputStream out) throws IOException {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        String json = "{\"message\":\"Slow response after 5 seconds\"}";
         sendResponse(out, 200, "OK", "application/json; charset=UTF-8",
                 json.getBytes(StandardCharsets.UTF_8));
     }
